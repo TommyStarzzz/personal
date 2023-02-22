@@ -1,0 +1,123 @@
+:root {
+    --main-color: rgb(0, 0, 0);
+    --secondary-color: rgb(26,26,26);
+    --font-color:rgb(255,255,255);
+    --link-color: rgb(11, 83, 11) ;
+    --gap: 15px
+}
+
+ h1, body, .nickname, ul, .description {
+    margin: 0 ;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+    transition: 0.4s ;
+}
+
+a:hover,a:focus,a:active {
+    opacity:0.7 ;
+}
+
+html {
+    background-color: var(--secondary-color);
+    color: var(--font-color)
+}
+body , .avatar {
+    margin:0 auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    min-height: calc(100vh - var(--gap)*2);
+    background-color: var(--main-color);
+    padding: var(--gap);
+}
+
+h2{
+    font-size: 20px;
+}
+
+h1{
+    font-size: 25px;
+}
+
+header{
+    position: relative;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.avatar , header , main, h1, .description , .links {
+    margin-bottom: var(--gap); 
+}
+
+    .avatar {
+    display: block;
+    height: 140px;
+    width: 140px;
+    border: 2px solid var(--link-color);
+    border-radius: 60%;
+    object-fit: cover;
+}
+.nickname , .description, h1, footer {
+    text-align:center
+}
+
+.lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.links img {
+    height: 37px;
+    width: 37px;
+}
+
+.email-letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--font-color) ;
+    width: 100%;
+    height: 50px;
+    border-radius: 35px;
+    border: 2px solid var(--link-color);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 430px) {
+    .avatar {
+        height:170px;
+        width:170px;
+    }
+    body {
+        width: 400px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .email-letter{
+        font-size:20px
+    }
+  }
